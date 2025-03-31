@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Referral Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>FinServ__ExpressedInterest__c</fieldNames>
+        <fieldNames>FinServ__PotentialValue__c</fieldNames>
+        <fieldNames>FinServ__ReferredByContact__c</fieldNames>
+        <fieldNames>FinServ__ReferredByUser__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Learn about and contact your new referral quickly.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Use Salesforce referrals to separate potential customers from existing customer&amp;#39;s you already know.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Respond to your referral within five days to increase your chances of converting the referral record to an opportunity. &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Review your referral&amp;#39;s description and expressed interest to understand the customer&amp;#39;s needs.&lt;/li&gt;&lt;li&gt;Connect with the referrer to extract more information about the prospect if appropriate.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Nurture your referral so that you’re top-of-mind.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Send emails based on time intervals and your referrals’ actions. Nurturing referrals helps to free up time to focus on other opportunities in your pipeline.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Assign a rating to your referral based on what you’ve learned during the qualification process.&lt;/li&gt;&lt;li&gt;Before you mark your referral Unqualified, schedule six follow-up tasks to email or call your referral.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Nurturing - Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Congratulations! &lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Now it’s time to convert the referral record to an opportunity. Then, continue the qualification process with your new contact.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;To prevent creating duplicate accounts, search for existing account first.&lt;/p&gt;</info>
+        <picklistValueName>Qualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>LeadSource</fieldNames>
+        <fieldNames>FinServ__PotentialValue__c</fieldNames>
+        <fieldNames>FinServ__ExpressedInterest__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;If your referral has neither the interest nor the authority to purchase from you, mark the referral as Unqualified. &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Don’t waste time on unqualified referrals.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Learn about the referral source before you spend time selling them a product they&amp;#39;re not ready for.&lt;/li&gt;&lt;li&gt;Determine whether referral is likely to buy from you.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Unqualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>FinServ__ExpressedInterest__c</fieldNames>
+        <fieldNames>FinServ__PotentialValue__c</fieldNames>
+        <fieldNames>Email</fieldNames>
+        <fieldNames>MobilePhone</fieldNames>
+        <fieldNames>Phone</fieldNames>
+        <info>&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Verify contact information and qualify your referral.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Gather as much contact information as you can. Get tips from the pros about &lt;u&gt;the importance of qualifying your referral&lt;/u&gt;.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Get your referral’s email address, phone number, and title so that you can include your referral in future campaigns.&lt;/li&gt;&lt;li&gt;Email your referral first, and immediately follow up with a phone call.&lt;/li&gt;&lt;li&gt;Rehearse your call scripts so that you sound confident and the flow of your conversation is more natural.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Working - Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Referral</recordTypeName>
+</PathAssistant>

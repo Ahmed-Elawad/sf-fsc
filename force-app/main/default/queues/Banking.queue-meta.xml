@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Banking</name>
+    <queueMembers>
+        <users>
+            <user>admin@ind330.8092.com</user>
+            <user>hburt.q5c3jvtjxxsb.jckduv4yy17h.4cegjosy0ey3.z8kcu3.ijl9u93jsurp@ind330.8092.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

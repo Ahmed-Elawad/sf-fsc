@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Assign Referrals</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>Banking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.FinServ__ExpressedInterest__c</field>
+                <operation>equals</operation>
+                <value>Credit Card,Savings Account,Checking Account,Day to Day Banking,Education</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Investment</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.FinServ__ExpressedInterest__c</field>
+                <operation>equals</operation>
+                <value>Investments</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

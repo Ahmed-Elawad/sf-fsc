@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActionPlanTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>Normal</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Cost of living analysis for new location</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 30</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 30 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <isRequired>true</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Cost of living analysis for new location</name>
+        <uniqueName>Cost_of_living_analysis_for_new_location_3e2110ae_b084_11ee_a3af_c39e951b945f</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 90</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Schedule meeting 30 days pre-move</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 90 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>High</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <isRequired>true</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Schedule meeting 30 days pre-move</name>
+        <uniqueName>Schedule_meeting_30_days_pre_move_3e2185e0_b084_11ee_a3af_1b6a71fd0fdb</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItem>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Priority</name>
+            <valueLiteral>Normal</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>IsReminderSet</name>
+            <valueLiteral>false</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>Subject</name>
+            <valueLiteral>Schedule meeting to discuss relocation budget</valueLiteral>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ReminderDateTime</name>
+            <valueFormula>StartDate + 30 - 0 +</valueFormula>
+        </actionPlanTemplateItemValue>
+        <actionPlanTemplateItemValue>
+            <itemEntityType>Task</itemEntityType>
+            <name>ActivityDate</name>
+            <valueFormula>StartDate + 30</valueFormula>
+        </actionPlanTemplateItemValue>
+        <isRequired>false</isRequired>
+        <itemEntityType>Task</itemEntityType>
+        <name>Schedule meeting to discuss relocation budget</name>
+        <uniqueName>Schedule_meeting_to_discuss_relocation_budg_3e21fb12_b084_11ee_a3af_6bb8e178f340</uniqueName>
+    </actionPlanTemplateItem>
+    <actionPlanTemplateItemDependencies>
+        <creationType>OnPreviousItemCompleted</creationType>
+        <name>name</name>
+        <previousTemplateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>Normal</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Cost of living analysis for new location</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 30</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 30 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <isRequired>true</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Cost of living analysis for new location</name>
+            <uniqueName>Cost_of_living_analysis_for_new_location_3e2110ae_b084_11ee_a3af_c39e951b945f</uniqueName>
+        </previousTemplateItem>
+        <templateItem>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Priority</name>
+                <valueLiteral>Normal</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>IsReminderSet</name>
+                <valueLiteral>false</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>Subject</name>
+                <valueLiteral>Schedule meeting to discuss relocation budget</valueLiteral>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ReminderDateTime</name>
+                <valueFormula>StartDate + 30 - 0 +</valueFormula>
+            </actionPlanTemplateItemValue>
+            <actionPlanTemplateItemValue>
+                <itemEntityType>Task</itemEntityType>
+                <name>ActivityDate</name>
+                <valueFormula>StartDate + 30</valueFormula>
+            </actionPlanTemplateItemValue>
+            <isRequired>false</isRequired>
+            <itemEntityType>Task</itemEntityType>
+            <name>Schedule meeting to discuss relocation budget</name>
+            <uniqueName>Schedule_meeting_to_discuss_relocation_budg_3e21fb12_b084_11ee_a3af_6bb8e178f340</uniqueName>
+        </templateItem>
+    </actionPlanTemplateItemDependencies>
+    <description>Template for the following person life events: Relocation, extended vacations, sabbaticals, etc.</description>
+    <isAdHocItemCreationEnabled>true</isAdHocItemCreationEnabled>
+    <name>Relocation Consult</name>
+    <targetEntityType>PersonLifeEvent</targetEntityType>
+    <uniqueName>Relocation_Consult_3df82bea_b084_11ee_a3af_6f2d3c98acad</uniqueName>
+</ActionPlanTemplate>

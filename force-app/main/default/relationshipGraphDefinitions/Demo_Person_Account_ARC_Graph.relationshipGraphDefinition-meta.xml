@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelationshipGraphDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isActive>true</isActive>
+    <isTemplate>false</isTemplate>
+    <masterLabel>Demo Person Account ARC Graph</masterLabel>
+    <relationshipGraphDefVersions>
+        <graphDefinition>{
+  &quot;graph&quot; : {
+    &quot;rootNode&quot; : {
+      &quot;id&quot; : &quot;8525f78d-c505-4adc-bad6-d50aa1a6fa35&quot;,
+      &quot;object&quot; : {
+        &quot;entity&quot; : &quot;PersonAccount&quot;
+      },
+      &quot;configurationType&quot; : &quot;Primary&quot;,
+      &quot;nodeUiConfig&quot; : {
+        &quot;label&quot; : &quot;Accounts&quot;,
+        &quot;fieldsToDisplay&quot; : [ ],
+        &quot;showFieldLabels&quot; : true,
+        &quot;actions&quot; : { }
+      },
+      &quot;childRelationships&quot; : [ {
+        &quot;ManyToMany&quot; : {
+          &quot;targetObjectNode&quot; : {
+            &quot;sortFields&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              },
+              &quot;order&quot; : &quot;DESC&quot;
+            } ],
+            &quot;id&quot; : &quot;bde07d06-162b-4bb8-b008-60c04becbc32&quot;,
+            &quot;object&quot; : {
+              &quot;entity&quot; : &quot;Account&quot;
+            },
+            &quot;configurationType&quot; : &quot;Primary&quot;,
+            &quot;nodeUiConfig&quot; : {
+              &quot;label&quot; : &quot;Primary Household&quot;,
+              &quot;recordActionsLabel&quot; : &quot;&quot;,
+              &quot;fieldsToDisplay&quot; : [ {
+                &quot;field&quot; : &quot;FinServ__TotalFinancialAccounts__c&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              }, {
+                &quot;field&quot; : &quot;FinServ__AUM__c&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              } ],
+              &quot;showFieldLabels&quot; : true,
+              &quot;actions&quot; : {
+                &quot;containerActions&quot; : [ ],
+                &quot;recordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Edit&quot;
+                } ],
+                &quot;junctionRecordActions&quot; : [ {
+                  &quot;action&quot; : &quot;EditRelation&quot;
+                } ]
+              },
+              &quot;junctionActionsLabel&quot; : &quot;&quot;
+            },
+            &quot;childRelationships&quot; : [ {
+              &quot;ManyToMany&quot; : {
+                &quot;targetObjectNode&quot; : {
+                  &quot;sortFields&quot; : [ {
+                    &quot;field&quot; : {
+                      &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    },
+                    &quot;order&quot; : &quot;DESC&quot;
+                  } ],
+                  &quot;id&quot; : &quot;1573494a-f647-434e-b0ae-2eb1d1d5ea67&quot;,
+                  &quot;object&quot; : {
+                    &quot;entity&quot; : &quot;PersonAccount&quot;
+                  },
+                  &quot;configurationType&quot; : &quot;Instance&quot;,
+                  &quot;nodeUiConfig&quot; : {
+                    &quot;label&quot; : &quot;HH Members&quot;,
+                    &quot;recordActionsLabel&quot; : &quot;&quot;,
+                    &quot;fieldsToDisplay&quot; : [ {
+                      &quot;field&quot; : &quot;FinServ__AUM__c&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    }, {
+                      &quot;field&quot; : &quot;PersonEmail&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    }, {
+                      &quot;field&quot; : &quot;FinServ__TotalFinancialAccounts__c&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    }, {
+                      &quot;field&quot; : &quot;FinServ__PrimaryGroup__c&quot;,
+                      &quot;whichEntity&quot; : &quot;JUNCTION&quot;
+                    } ],
+                    &quot;showFieldLabels&quot; : true,
+                    &quot;actions&quot; : {
+                      &quot;containerActions&quot; : [ ],
+                      &quot;recordActions&quot; : [ {
+                        &quot;action&quot; : &quot;Edit&quot;
+                      } ],
+                      &quot;junctionRecordActions&quot; : [ {
+                        &quot;action&quot; : &quot;EditRelation&quot;
+                      }, {
+                        &quot;action&quot; : &quot;RemoveRelation&quot;
+                      } ]
+                    },
+                    &quot;junctionActionsLabel&quot; : &quot;&quot;
+                  },
+                  &quot;childRelationships&quot; : [ ]
+                },
+                &quot;relationshipUiConfig&quot; : { },
+                &quot;filter&quot; : {
+                  &quot;filterCriteria&quot; : [ ],
+                  &quot;booleanFilter&quot; : &quot;&quot;
+                },
+                &quot;junctionObject&quot; : {
+                  &quot;entity&quot; : &quot;AccountContactRelation&quot;
+                },
+                &quot;sourceField&quot; : {
+                  &quot;field&quot; : &quot;AccountId&quot;
+                },
+                &quot;targetField&quot; : {
+                  &quot;field&quot; : &quot;ContactId&quot;
+                }
+              }
+            } ]
+          },
+          &quot;relationshipUiConfig&quot; : { },
+          &quot;filter&quot; : {
+            &quot;filterCriteria&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;FinServ__PrimaryGroup__c&quot;,
+                &quot;whichEntity&quot; : &quot;JUNCTION&quot;
+              },
+              &quot;operator&quot; : &quot;eq&quot;,
+              &quot;value&quot; : true
+            } ],
+            &quot;booleanFilter&quot; : &quot;1&quot;
+          },
+          &quot;junctionObject&quot; : {
+            &quot;entity&quot; : &quot;AccountContactRelation&quot;
+          },
+          &quot;sourceField&quot; : {
+            &quot;field&quot; : &quot;ContactId&quot;
+          },
+          &quot;targetField&quot; : {
+            &quot;field&quot; : &quot;AccountId&quot;
+          }
+        }
+      }, {
+        &quot;ManyToMany&quot; : {
+          &quot;targetObjectNode&quot; : {
+            &quot;sortFields&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              },
+              &quot;order&quot; : &quot;DESC&quot;
+            } ],
+            &quot;id&quot; : &quot;3f732c4d-9069-48bb-b3d1-f1dfd575b6bf&quot;,
+            &quot;object&quot; : {
+              &quot;entity&quot; : &quot;Account&quot;
+            },
+            &quot;configurationType&quot; : &quot;Custom&quot;,
+            &quot;nodeUiConfig&quot; : {
+              &quot;label&quot; : &quot;Related Accounts&quot;,
+              &quot;recordActionsLabel&quot; : &quot;&quot;,
+              &quot;fieldsToDisplay&quot; : [ {
+                &quot;field&quot; : &quot;Roles&quot;,
+                &quot;whichEntity&quot; : &quot;JUNCTION&quot;,
+                &quot;labelOverride&quot; : &quot;Association&quot;
+              } ],
+              &quot;showFieldLabels&quot; : true,
+              &quot;actions&quot; : {
+                &quot;containerActions&quot; : [ ],
+                &quot;recordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Edit&quot;
+                } ],
+                &quot;junctionRecordActions&quot; : [ {
+                  &quot;action&quot; : &quot;EditRelation&quot;
+                }, {
+                  &quot;action&quot; : &quot;RemoveRelation&quot;
+                } ]
+              },
+              &quot;junctionActionsLabel&quot; : &quot;&quot;
+            },
+            &quot;childRelationships&quot; : [ {
+              &quot;ManyToMany&quot; : {
+                &quot;targetObjectNode&quot; : {
+                  &quot;sortFields&quot; : [ {
+                    &quot;field&quot; : {
+                      &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    },
+                    &quot;order&quot; : &quot;DESC&quot;
+                  } ],
+                  &quot;id&quot; : &quot;3ae2414c-3cfd-43d3-925d-af56cadc4685&quot;,
+                  &quot;object&quot; : {
+                    &quot;entity&quot; : &quot;PersonAccount&quot;
+                  },
+                  &quot;configurationType&quot; : &quot;Custom&quot;,
+                  &quot;nodeUiConfig&quot; : {
+                    &quot;label&quot; : &quot;Contacts&quot;,
+                    &quot;recordActionsLabel&quot; : &quot;&quot;,
+                    &quot;fieldsToDisplay&quot; : [ {
+                      &quot;field&quot; : &quot;Name&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    }, {
+                      &quot;field&quot; : &quot;Owner.Name&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    } ],
+                    &quot;showFieldLabels&quot; : true,
+                    &quot;actions&quot; : {
+                      &quot;containerActions&quot; : [ ],
+                      &quot;recordActions&quot; : [ ],
+                      &quot;junctionRecordActions&quot; : [ ]
+                    },
+                    &quot;junctionActionsLabel&quot; : &quot;&quot;
+                  },
+                  &quot;childRelationships&quot; : [ ]
+                },
+                &quot;relationshipUiConfig&quot; : { },
+                &quot;filter&quot; : {
+                  &quot;filterCriteria&quot; : [ ],
+                  &quot;booleanFilter&quot; : &quot;&quot;
+                },
+                &quot;junctionObject&quot; : {
+                  &quot;entity&quot; : &quot;AccountContactRelation&quot;
+                },
+                &quot;sourceField&quot; : {
+                  &quot;field&quot; : &quot;AccountId&quot;
+                },
+                &quot;targetField&quot; : {
+                  &quot;field&quot; : &quot;ContactId&quot;
+                }
+              }
+            } ]
+          },
+          &quot;relationshipUiConfig&quot; : { },
+          &quot;filter&quot; : {
+            &quot;filterCriteria&quot; : [ ],
+            &quot;booleanFilter&quot; : &quot;&quot;
+          },
+          &quot;junctionObject&quot; : {
+            &quot;entity&quot; : &quot;AccountContactRelation&quot;
+          },
+          &quot;sourceField&quot; : {
+            &quot;field&quot; : &quot;ContactId&quot;
+          },
+          &quot;targetField&quot; : {
+            &quot;field&quot; : &quot;AccountId&quot;
+          }
+        }
+      }, {
+        &quot;ManyToMany&quot; : {
+          &quot;targetObjectNode&quot; : {
+            &quot;sortFields&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              },
+              &quot;order&quot; : &quot;DESC&quot;
+            } ],
+            &quot;id&quot; : &quot;719eac8c-780b-4f8a-93e5-c0bc604c0b6a&quot;,
+            &quot;object&quot; : {
+              &quot;entity&quot; : &quot;Contact&quot;
+            },
+            &quot;configurationType&quot; : &quot;Primary&quot;,
+            &quot;nodeUiConfig&quot; : {
+              &quot;label&quot; : &quot;Contacts&quot;,
+              &quot;recordActionsLabel&quot; : &quot;&quot;,
+              &quot;fieldsToDisplay&quot; : [ {
+                &quot;field&quot; : &quot;FinServ__Role__r.FinServ__InverseRole__c&quot;,
+                &quot;whichEntity&quot; : &quot;JUNCTION&quot;,
+                &quot;labelOverride&quot; : &quot;Relationship&quot;
+              } ],
+              &quot;showFieldLabels&quot; : true,
+              &quot;actions&quot; : {
+                &quot;containerActions&quot; : [ ],
+                &quot;recordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Edit&quot;
+                } ],
+                &quot;junctionRecordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Edit&quot;
+                } ]
+              },
+              &quot;junctionActionsLabel&quot; : &quot;&quot;
+            },
+            &quot;childRelationships&quot; : [ ]
+          },
+          &quot;relationshipUiConfig&quot; : { },
+          &quot;filter&quot; : {
+            &quot;filterCriteria&quot; : [ ],
+            &quot;booleanFilter&quot; : &quot;&quot;
+          },
+          &quot;junctionObject&quot; : {
+            &quot;entity&quot; : &quot;FinServ__ContactContactRelation__c&quot;
+          },
+          &quot;sourceField&quot; : {
+            &quot;field&quot; : &quot;FinServ__RelatedContact__c&quot;
+          },
+          &quot;targetField&quot; : {
+            &quot;field&quot; : &quot;FinServ__Contact__c&quot;
+          }
+        }
+      }, {
+        &quot;ManyToMany&quot; : {
+          &quot;targetObjectNode&quot; : {
+            &quot;sortFields&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              },
+              &quot;order&quot; : &quot;DESC&quot;
+            } ],
+            &quot;id&quot; : &quot;66de2292-cb0b-4362-a8f9-ae34ed99d118&quot;,
+            &quot;object&quot; : {
+              &quot;entity&quot; : &quot;FinServ__FinancialAccount__c&quot;
+            },
+            &quot;configurationType&quot; : &quot;Primary&quot;,
+            &quot;nodeUiConfig&quot; : {
+              &quot;label&quot; : &quot;Financial Accounts&quot;,
+              &quot;recordActionsLabel&quot; : &quot;&quot;,
+              &quot;fieldsToDisplay&quot; : [ {
+                &quot;field&quot; : &quot;FinServ__PrimaryOwner__r.Name&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              }, {
+                &quot;field&quot; : &quot;FinServ__Balance__c&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              }, {
+                &quot;field&quot; : &quot;FinServ__Ownership__c&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              } ],
+              &quot;showFieldLabels&quot; : true,
+              &quot;actions&quot; : {
+                &quot;containerActions&quot; : [ ],
+                &quot;recordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Edit&quot;
+                } ],
+                &quot;junctionRecordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Edit&quot;
+                } ]
+              },
+              &quot;junctionActionsLabel&quot; : &quot;&quot;
+            },
+            &quot;childRelationships&quot; : [ ]
+          },
+          &quot;relationshipUiConfig&quot; : { },
+          &quot;filter&quot; : {
+            &quot;filterCriteria&quot; : [ ],
+            &quot;booleanFilter&quot; : &quot;&quot;
+          },
+          &quot;junctionObject&quot; : {
+            &quot;entity&quot; : &quot;FinServ__FinancialAccountRole__c&quot;
+          },
+          &quot;sourceField&quot; : {
+            &quot;field&quot; : &quot;FinServ__RelatedAccount__c&quot;
+          },
+          &quot;targetField&quot; : {
+            &quot;field&quot; : &quot;FinServ__FinancialAccount__c&quot;
+          }
+        }
+      } ]
+    },
+    &quot;globalUiConfig&quot; : {
+      &quot;allowRuntimeCustomizations&quot; : true
+    }
+  }
+}</graphDefinition>
+        <graphType>VerticalHierarchy</graphType>
+    </relationshipGraphDefVersions>
+</RelationshipGraphDefinition>
